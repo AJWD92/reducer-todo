@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div className='App'>
-      <h1>Todo App</h1>
+      <h1 style={{marginTop: '2%'}}>Todo App</h1>
       <TodoForm clearCompleted={clearCompleted} addNewTodo={addNewTodo} />
       <TodoList todos={state.todos} toggleCompleted={toggleCompleted} />
     </div>
