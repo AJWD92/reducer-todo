@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const TodoForm = props => {
     const [todo, setTodo] = useState('');
 
@@ -17,6 +18,7 @@ const TodoForm = props => {
         props.clearCompleted();
     };
 
+    
     return (
         <div>
             <form style={{display: 'flex', flexDirection: 'column', marginTop: '2%', justifyContent: 'center', alignItems: 'center'}} onSubmit={handleSubmit}>
@@ -29,6 +31,7 @@ const TodoForm = props => {
                 placeholder='Add New Task'
                 onChange={handleChange}
                 />
+                
                 <button style={{margin: '1% 0', width: '12vw'}}  className='btn btn-primary'>Add Task</button>
             </form>
             <button className='btn btn-outline-secondary' onClick={clearCompleted}>Clear Completed Task</button>

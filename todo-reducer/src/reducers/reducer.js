@@ -1,21 +1,30 @@
 export const initialState = {
     todos: [
         {
+            item: 'Learn React',
+            completed: false,
+            id: 1,
+        },
+        {
+            item: 'Learn reducer',
+            completed: false,
+            id: 2,
+        },
+        {
             item: 'Learn Redux',
             completed: false,
-            id: 1234567890
+            id: 3,
         },
         {
-            item: 'Learn Async',
+            item: 'Learn Async Redux',
             completed: false,
-            id: 2345678901
+            id: 4,
         },
         {
-            item: 'Hit stretch on the sprint',
+            item: 'Hit stretch on sprint',
             completed: false,
-            id: 3456789012
+            id: 5,
         }
-
     ]
 };
 
@@ -42,6 +51,7 @@ export const reducer = (state, action) => {
 
             case 'CLEAR_COMPLETED':
             return { ...state, todos: state.todos.filter(item => !item.completed)};
+            
         default:
             return state;
     }

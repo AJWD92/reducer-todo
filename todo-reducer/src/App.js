@@ -1,9 +1,16 @@
 import React, {useReducer} from 'react';
+
+// Components
 import TodoList from './component/TodoList';
 import TodoForm from './component/TodoForm';
+
+// reducers
 import {reducer, initialState} from './reducers/reducer';
+
+// styling
 import './App.css';
 import 'bootswatch/dist/lux/bootstrap.min.css';
+
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -27,6 +34,7 @@ function App() {
       type: "CLEAR_COMPLETED"
     });
   };
+
 
   return (
     <div className='App'>
